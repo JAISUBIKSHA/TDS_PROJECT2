@@ -91,7 +91,7 @@ def generate_correlation_matrix(data, output_dir):   # To find relationships bet
     
 # DBSCAN clustering (Density-Based Clustering)
 
-def clustering(data, output_dir):    # Identifying regions of high density
+def dbscan_clustering(data, output_dir):    # Identifying regions of high density
     numeric_data = data.select_dtypes(include=np.number).dropna()
     scaler = StandardScaler()
     scaled_data = scaler.fit_transform(numeric_data)
